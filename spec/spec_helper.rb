@@ -1,5 +1,8 @@
 require 'spicerack'
 
+require 'coveralls'
+Coveralls.wear_merged!
+
 require_relative 'support/vcr_setup'
 
 RSpec.configure do |config|
