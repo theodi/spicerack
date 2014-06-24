@@ -6,3 +6,4 @@ require 'spicerack/version'
 
 require 'spicerack/authoriser'
 require 'spicerack/config'
+require 'spicerack/service'
