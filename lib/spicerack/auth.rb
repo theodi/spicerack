@@ -15,7 +15,13 @@ module Spicerack
       }
     }.to_json
 
-    response = HTTParty.post('https://identity.api.rackspacecloud.com/v2.0/tokens', headers: { 'Content-type' => 'application/json', 'Accept' => 'application/json'}, body: payload)
+    auth_url = 'https://identity.api.rackspacecloud.com/v2.0/tokens'
+    headers = {
+      'Content-type' => 'application/json',
+      'Accept' => 'application/json'
+    }
+
+    response = HTTParty.post(auth_url, headers: headers, body: payload)
 
     j = JSON.parse response.body
     j["access"]["token"]["id"]
