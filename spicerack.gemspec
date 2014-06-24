@@ -34,5 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr', '~> 2.9'
   spec.add_development_dependency 'timecop', '~> 0.7'
   spec.add_development_dependency 'badgerbadgerbadger', '~> 0.9'
-  spec.add_development_dependency 'travis'
+  spec.add_development_dependency 'travis', '= 1.6.14'
 end
