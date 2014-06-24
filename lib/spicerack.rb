@@ -1,3 +1,8 @@
+require 'dotenv'
+require 'httparty'
+require 'singleton'
+
 require 'spicerack/version'
 
-require 'spicerack/auth'
+require 'spicerack/authoriser'
+require 'spicerack/config'
