@@ -5,3 +5,13 @@ env:
   global:
   - secure: gkRnlLsRpLUPYxYo9RA5KMjcPX35JuRPmU/gNyHZJInlOpUcIFrN5oGdTo5BaAMRuf5iJL2StYEslyJOLlzxO42Rqin2IkZaDvA81nA7mH47JzUVWpQVX8XQe3Un+Bgiea42ARyvV8lI4sqi+kkgyWtnH7Rm4qsewYxvJiAcH9o=
   - secure: T4dOPu8HNPpfW53BzjeNp5VnVnag4BJoomjs+yA3pDHB9Px3HMjphBrn653a0BivODL48Iz959OwWwfdVaZl+p0nJ0yTOUsyuDMkvi2HeJCc4Lvh6z94PQjjmREZXuSd+NI0Jsc+iLBj5WoPnllLQcWnk3c5C+P9PAShInbit+s=
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: NHXmwaSEF/4dzES7RperfhSR9s5HW5y6b/yBafOqBTtlobvCwC5ykWTOvI/st8ldjxqDXLJNRfJpRZExKMMOlgPsYyRthQu/AvbpnLZiBSJ08XqWBcCH2W23hzlUg5QTYT9mml2ElhpCd5DSl6js2tWpOQnFlLaG/Uw/X3cO0Hs=
+  gem: spicerack
+  on:
+    tags: true
+    repo: theodi/spicerack
+    all_branches: true
