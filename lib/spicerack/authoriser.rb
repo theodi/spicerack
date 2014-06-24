@@ -7,7 +7,14 @@ module Spicerack
     def initialize
       Dotenv.load
       @config = Config.instance.config
+      @access = OpenStruct.new connect["access"]
+    end
 
+    def access
+      @access
+    end
+
+    def connect
       payload = {
         auth: {
           'RAX-KSKEY:apiKeyCredentials' => {
@@ -25,8 +32,7 @@ module Spicerack
 
       response = HTTParty.post auth_url, headers: headers, body: payload
 
-      j = JSON.parse response.body
-      @token = j["access"]["token"]["id"]
+      JSON.parse response.body
     end
   end
 end
