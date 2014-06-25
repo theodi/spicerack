@@ -9,3 +9,5 @@
 # Spicerack
 
 Ruby bindings for the Rackspace Cloud API
+
+Which, it occurs to me, are already covered by Fog. So I'm leaving this here
